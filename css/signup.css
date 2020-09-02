@@ -43,13 +43,13 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.signin-form{
+.signup-form{
     width: 390px;
     margin: 0 auto;
     padding: 30px 0;
 }
 
-.signin-form form{
+.signup-form form{
     color: #999;
     border-radius: 3px;
     margin-bottom: 15px;
@@ -58,16 +58,20 @@ body{
     padding: 30px;
 }
 
-.signin-form .form-group{
+.signup-form .form-group{
     margin-bottom: 20px;
 }
 
-.signin-form label{
+.signup-form label{
     font-weight: normal;
     font-size: 13px;
 }
 
-.signin-form .btn {
+.signup-form input[type="checkbox"]{
+    margin-top: 2px;
+}
+
+.signup-form .btn {
     font-size: 16px;
     font-weight: bold;
     background: #00cb82;
@@ -75,15 +79,15 @@ body{
     min-width: 200px;
 }
 
-.signin-form .btn:hover, .signin-form .btn:focus{
+.signup-form .btn:hover, .signup-form .btn:focus{
     background: #00b073 !important;
     outline: none;
 }
 
-.signin-form a{
+.signup-form a{
     color: #00cb82;
 }
 
-.signin-form a:hover{
+.signup-form a:hover{
     text-decoration: underline;
 }
