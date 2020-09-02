@@ -48,7 +48,7 @@
             </div>
             <div class="form-group">
                 <label>Genero</label>
-                <select class="form-control" name="user_country" require>
+                <select class="form-control" name="user_gender" require>
                    <option disabled="">Seleccciona tu genero</option>
                    <option>Hombre</option> 
                    <option>Mujer</option> 
@@ -63,7 +63,7 @@
     <div class="form-group">
             <button type="submit" class="btn btn-primary btn btn-block btn-lg" name="sign_up" >Registrar</button>
     </div>
-    <!-- <?php include("signup_user.php"); ?> -->
+    <?php include("signup_user.php"); ?>
     </form>
     <div class="text-center medium" style="color: white;">¿Ya tienes una cuenta? <a href="signin.php" style="color: blue;">Ingresa aqui</a></div>
     </div>
