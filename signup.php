@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400, 700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootsrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/signup.css">
     <title>Crear nueva cuenta</title>
 </head>
 
 <body>
     <div class="signup-form">
-        <form action="" methos="post">
+        <form action="" method="post">
             <div class="form-header">
                 <h2>Registrarse</h2>
                 <p>Completa este formulario y disfruta de AppChat</p>
@@ -61,7 +59,7 @@
             </div>
 
     <div class="form-group">
-            <button type="submit" class="btn btn-primary btn btn-block btn-lg" name="sign_up" >Registrar</button>
+            <button type="submit" class="btn btn-primary btn-block btn-lg" name="sign_up" >Registrar</button>
     </div>
     <?php include("signup_user.php"); ?>
     </form>

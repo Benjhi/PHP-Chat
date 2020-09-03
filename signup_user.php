@@ -30,10 +30,10 @@ include("include/connection.php");
             exit();
         }
 
-        if($rand ==1)
-            $profile_pic = "image/profile1.jpg";
+        if($rand == 1)
+            $profile_pic = "img/profile1.png";
         else if($rand == 2)
-            $profile_pic = "image/profile2.jpg";
+            $profile_pic = "img/profile2.png";
 
         $insert = "insert into users (user_name, user_pass, user_email, user_profile, user_country, user_gender) values('$name', '$pass', '$email', '$profile_pic', '$country', '$gender')";
 
