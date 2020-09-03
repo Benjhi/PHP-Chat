@@ -20,15 +20,15 @@
             </div>
             <div class="form-group">
                 <label>Nombre de usuario</label>
-                <input type="text" class="form-control" nombre="user_name" placeholder="Ejemplo: Renzo" autocomplete="off" required>
+                <input type="text" class="form-control" name="user_name" placeholder="Ejemplo: Renzo" autocomplete="off" required>
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" class="form-control" nombre="user_pass" placeholder="Contraseña" autocomplete="off" required>
+                <input type="password" class="form-control" name="user_pass" placeholder="Contraseña" autocomplete="off" required>
             </div>
             <div class="form-group">
                 <label>Correo electronico</label>
-                <input type="email" class="form-control" nombre="user_email" placeholder="alguien@gmail.com" autocomplete="off" required>
+                <input type="email" class="form-control" name="user_email" placeholder="alguien@gmail.com" autocomplete="off" required>
             </div>
             <div class="form-group">
                 <label>Pais</label>
