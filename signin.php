@@ -13,22 +13,22 @@
 </head>
 <body>
     <div class="signin-form">
-    <form action="" methos="post">
+    <form action="" method="post">
     <div class="form-header">
     <h2>Accede a tu cuenta</h2>
     </div>
     <div class="form-group">
     <label>Email</label>
-    <input type="email" class="form-control" nombre="email" placeholder="alguien@gmail.com" autocomplete="off" required>
+    <input type="email" class="form-control" name="email" placeholder="alguien@gmail.com" autocomplete="off" required>
     </div>
     <div class="form-group">
     <label>Contraseña</label>
-    <input type="password" class="form-control" nombre="pass" placeholder="Contraseña" autocomplete="off" required>
+    <input type="password" class="form-control" name="pass" placeholder="Contraseña" autocomplete="off" required>
     </div>
     <div class="small">¿Olvidaste tu contraseña? <a href="forgot_pass.php">Click aqui</a></div><br>
     <button type="submit" class="btn btn-primary btn btn-block btn-lg" name="sign_in">Ingresar</button>
     </div>
-    <!-- <?php include("signin_user.php"); ?> -->
+    <?php include("signin_user.php"); ?>
     </form>
     <div class="text-center medium" style="color: white;">¿No tienes una cuenta? <a href="signup.php" style="color: blue;">Crear cuenta</a></div>
     </div>
