@@ -8,6 +8,7 @@ if(!isset($_SESSION['user_email'])){
     header("location: signin.php");
 }
 else { ?>
+<html>
 <head>
         <title>Configurar cuenta</title>
         <meta charset="utf-8">
@@ -23,7 +24,7 @@ else { ?>
         </div>
     <?php
         $user = $_SESSION['user_email'];
-        $get_user = "select * from user where user_email='$user'";
+        $get_user = "select * from users where user_email='$user'";
         $run_user = mysqli_query($con, $get_user);
         $row = mysqli_fetch_array($run_user);
 
@@ -98,12 +99,41 @@ else { ?>
                                 <div class="modal-body">
                                     <form action="recovery.php?id=<?php echo $user_id; ?>" method="post" id="f">
                                         <strong>Quien es tu mejor amigo de la escuela?</strong>
-                                        <textarea class="form-cont" cols="83" rows="4" name="content" placeholder="Alguien"></textarea><br>
-                                        <input class="btn btn-default" type="submit" name="sub" value="submit" style="width: 100px;"><br><br>
-                                        <pre></pre>
-
+                                        <textarea class="form-control" cols="83" rows="4" name="content" placeholder="Alguien"></textarea><br>
+                                        <input class="btn btn-default" type="submit" name="sub" value="Cambiar" style="width: 100px;"><br><br>
+                                        <pre>Responde la pregunta de abajo, te preguntaremos esto si olvidas tu <br>Contraseña.</pre>
+                                        <br><br>
                                     </form>
+                                    <?php 
+                                    
+                                    if(isset($_POST['sub'])){
+                                        $bfn = htmlentities($_POST['content']);
 
+                                        if($bfn == ''){
+
+                                            echo "<script>alert('Porfavor ingrese algo.')</script>";
+                                            echo"<script>window.open('account_settings.php', '_self')</script>";
+                                            exit();
+                                        }
+                                        else{
+                                            $update = "update users set forgotten_answer='$bfn' where user_email='$user'";
+
+                                            $run = mysqli_query($con, $update);
+
+                                            if($run){
+                                                echo "<script>alert('Cargando...')</script>";
+                                                echo"<script>window.open('account_settings.php', '_self')</script>";
+                                            }else{
+                                                echo "<script>alert('Error mientras se cambiaba la informacion.')</script>";
+                                            echo"<script>window.open('account_settings.php', '_self')</script>";
+                                            }
+                                        }
+                                    }
+
+                                    ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                 </div>
 
                             </div>
@@ -111,16 +141,43 @@ else { ?>
 
                     </div>
 
-                </td>
             </tr>
 
+            <tr><td></td><td><a class="btn btn-default" style="text-decoration: none;font-size: 15px;" href="change_password.php"<i class="fa fa-key fa-fw" aria-hidden="true"></i>Cambiar contraseña</td></tr>
+
+            <tr align="center">
+                <td colspan="6">
+                <input type="submit" value="Update" name="update" class="btn btn-info">
+            </td>
+            </tr>
         </table>
     </form>
+    <?php 
+      
+       if(isset($_POST['update'])){
 
-        </form>
+        $user_name = htmlentities($_POST['u_name']);
+        $email = htmlentities($_POST['u_email']);
+        $u_gender = htmlentities($_POST['u_gender']);
+        $u_country = htmlentities($_POST['u_country']);
+
+        $update = "update users set user_name = '$user_name', user_email = '$email', user_gender = '$_gender', user_country = '$u_country' where user_email='$user'";
+
+        $run = mysqli_query($con, $update);
+
+        if($run){
+            echo "<script>window.open('account_settings.php', '_self')</script>";
+        }
+
+       }
+    
+    ?>                                
+    </div>
+    <div class="col-sm-2">
 
     </div>
     </div>
     
 </body>
 </html>
+<?php } ?>
