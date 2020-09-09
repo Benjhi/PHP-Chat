@@ -7,12 +7,11 @@
                 $row = mysqli_fetch_array($run_user);
                 
                 $user_name = $row['user_name'];
-                echo" <a class='navbar-brand' href='../home.php?user_name=$user_name'>AppChat</a> ";
-
+                echo" <a class='navbar-brand' href='home.php?user_name=$user_name'>AppChat</a> ";
             ?>
+            </a>
             <ul class="navbar-nav">
-                <li><a style="color: white;text-decoration: none;font-size: 20px;" href="../account_settings.php">Configuracion</a></li>
+                <li><a style="color: white;text-decoration: none;font-size: 20px;" href="account_settings.php">Configuracion</a></li>
 
             </ul>
-        </a>
     </nav><br>
