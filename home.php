@@ -136,7 +136,7 @@ else { ?>
                                          </li>
 
                                     ";
-                                   }
+                                   }                  
                              ?>
                          </ul>
                          <?php
@@ -188,6 +188,7 @@ else { ?>
                 $insert = "insert into users_chat(sender_username, receiver_username, msg_content, msg_status, msg_date) values('$user_name', '$username', '$msg', 'unread', NOW())";
                 $run_insert = mysqli_query($con, $insert);
             }
+            
         }
     ?>
 
@@ -202,7 +203,6 @@ else { ?>
             $('.right-header-contentChat').css('height', (height - 163) + 'px');
         });
     </script>
-
     
 </body>
 </html>

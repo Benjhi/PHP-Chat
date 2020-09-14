@@ -51,7 +51,7 @@ else { ?>
                 </td>
             </tr>
 
-            <tr><td></td><td><a class="btn btn-default" style="text-decoration: none;font-size: 15px;" href="upload.php"><i class="fa fa-user" aria-hidden="true"></i> Cambiar perfil</td></tr>
+            <tr><td></td><td><a class="btn btn-default" style="text-decoration: none;font-size: 15px;" href="upload.php"><i class="fa fa-user" aria-hidden="true"></i> Cambiar imagen de perfil</td></tr>
 
             <tr>
                 <td style="font-weight: bold;">Cambiar tu Email</td>
@@ -88,7 +88,7 @@ else { ?>
             <tr>
                 <td style="font-weight: bold;">Contraseña olvidada</td>
                 <td>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Contraseña Olvidada</button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Recuperar Contraseña</button>
 
                     <div id="myModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -147,7 +147,7 @@ else { ?>
 
             <tr align="center">
                 <td colspan="6">
-                <input type="submit" value="Update" name="update" class="btn btn-info">
+                <input type="submit" value="Actualizar" name="update" class="btn btn-info">
             </td>
             </tr>
         </table>
